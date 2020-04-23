@@ -1,0 +1,832 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>Online Shopping|Destination</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			body,html
+			{
+				height: 100%;
+				width: 100%;
+				scroll-behavior: smooth;
+			}
+			
+			.front
+			{
+				height: 100%;
+				width: 100%;
+				background-image: url('intro-page.jpg');
+				background-size: cover;
+				background-position: center;
+				float: left;
+				opacity: 0.9;
+				z-index: 1000;
+			}
+			.top
+			{
+				height: 40px;
+				width: 40px;
+				left: 90%;
+				top: 90%;
+				position: fixed;
+				border-radius: 20px;
+				background-color: black;
+				text-align: center;
+				font-size: 20px;
+				color: white;
+				opacity: 1;
+				
+			}
+			.logo-box
+			{
+				position: fixed;
+				top: 10px;
+				left: 30px;
+				
+			}
+			#icon
+			{
+				height: 35px;
+				float: left;
+			}
+			.primary-box
+			{
+				position: absolute;
+				top: 40%;
+				left: 23%; 
+			}
+			.heading-primary
+			{
+				color: red;
+				text-transform: uppercase;
+			
+			}
+			#heading-primary-main
+			{
+				display: block;
+				font-size: 60px;
+				font-weight: 400;
+				letter-spacing: 35px;
+				animation-name: moveInDiagoalTop;
+				animation-duration: 1.5s;
+				animation-timing-function: ease-out;
+			}
+			#heading-primary-sub
+			{
+				display: block;
+				font-size: 20px;
+				font-weight: 400;
+				letter-spacing: 15px;
+				animation-name: moveInDiagoalBottom;
+				animation-duration: 1.5s;
+				animation-timing-function: ease-in;
+			}
+			@keyframes moveInDiagoalTop
+			{
+				0%
+				{
+					opacity: 0;
+					transform: translate(-100px,-100px) rotate(60deg);
+				}
+				50%
+				{
+					opacity: 0.5;
+					transform: translate(10px,10px);
+				}
+				100%
+				{
+					opacity: 1;
+					
+				}
+			}
+			
+			@keyframes moveInDiagoalBottom
+			{
+				0%
+				{
+					opacity: 0;
+					transform: translate(+100px,+100px) rotate(-60deg);
+				}
+				50%
+				{
+					opacity: 0.5;
+					transform: translate(-10px,-10px);
+				}
+				100%
+				{
+					opacity: 1;
+					
+				}
+			}
+			.offer-box
+			{
+				position: absolute;
+				top: 60%;
+				left: 37%; 
+				display: block;
+				font-size: 40px;
+				font-weight: 400;
+				letter-spacing: 25px;
+				background-color: red;
+				border-radius: 50px;
+				animation-name: movefrombottom;
+				animation-duration: 1s;
+			}
+			@keyframes movefrombottom
+			{
+				0%
+				{
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				100%
+				{
+					opacity: 1;
+				}
+			}
+
+			#heading-offer:link , #heading-offer:visited
+			{
+				text-decoration: none;	
+				color: white;
+			}
+			.offer-box:hover
+			{
+				transform: translateY(-2px);
+			}
+			#top_bar
+			{
+				left: 100px;
+				height:50px;
+				background-color: brown;
+				float: right;
+				position: fixed;
+				border-radius: 25px;
+				
+				
+			}
+			#top_bar ul 
+			{
+				float:center;
+				padding:0; margin:10px;
+				height:50px;
+				color: white;
+				display:inline-block;
+			}
+			#top_bar li 
+			{
+				float:left;
+				color: white;
+				height:34px;
+				list-style:none;
+				padding: 13px 20px 0 20px;
+				
+			}
+			#top_bar li:hover 
+			{
+				height:28px;
+				font-size: 26px;
+				background: orange;
+				border-radius: 25px;
+			}
+			
+			#cv19
+			{
+				background-color: red;
+				border-radius:	17px; 
+			}
+			#new :link , #new:visited
+			{
+				text-decoration:none;
+			}
+
+			#most :link , #most:visited
+			{
+				text-decoration:none;
+			}
+
+			#top-review1 :link , #top-review1:visited
+			{
+				text-decoration:none;
+			}
+
+			#top-review2 :link , #top-review2:visited
+			{
+				text-decoration:none;
+			}
+
+			#cv19 :link , #cv19:visited
+			{
+				text-decoration:none;
+				
+			}
+
+			.surprise
+			{
+				height: 100%;
+				width: 100%;
+				background-image: url('surprise-page.jpg');
+				background-size: cover;
+				background-position: center;
+				float: left;
+				
+				opacity: 0.9;
+				
+			}
+			#heading_surprise
+			{
+				text-align: center;
+			}
+			.card-surprise
+			{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+				
+			}
+			.card-surprise:hover
+			{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				
+			}
+			
+			#column
+			{
+				padding: 100px 0;
+				float: left;
+				width: 25%;
+				opacity: .9;
+				
+			}
+			.newer
+			{
+				height: 100%;
+				width: 100%;
+				text-align: left; 
+				background-image: url('newer_page.jpg');
+				background-size: cover;
+				background-position: top;
+				float: left;
+				
+				opacity: 0.9;
+				
+			}
+			#heading_newer
+			{
+				text-align: center;
+			}
+			.stack
+			{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+				position:relative;
+			}
+			.stack img:hover, .stack img:focus
+			{
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+				-ms-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-webkit-transform: scle(1.1);
+				transform: scale(1.1);
+				
+			}
+			#fir
+			{
+				padding: 2px 16px;
+				position: absolute;
+				
+				top: 100px;
+				left: 100px;
+				
+			}
+			#sec
+			{
+				
+				padding: 2px 16px;
+				position: absolute;
+				
+				top: 120px;
+				left: 350px;
+				
+			}
+			#thi
+			{
+				
+				padding: 2px 16px;
+				position: absolute;
+				
+				top: 140px;
+				left: 600px;
+				
+			}
+			#fou
+			{
+				
+				padding: 2px 16px;
+				position: absolute;
+				
+				top: 160px;
+				left: 850px;
+				
+			}
+			.most-bought
+			{
+				height: 100%;
+				width: 100%;
+				text-align: left; 
+				background-image: url('favourite-page.jpg');
+				background-size: cover;
+				background-position: top;
+				float: left;
+				opacity: 0.9;
+				
+				
+			}
+			#heading_most_bought
+			{
+				text-align: center;
+			}
+			.card-most
+			{
+				
+				transition: 0.3s;
+			}
+			.card-most:hover
+			{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				
+			}
+			.contains-col1
+			{
+				top: 50px;
+				left: 0;
+				position: relative;
+				color: white;
+			}
+			.contains-col2
+			{
+				top:300px;
+				
+				position: relative;
+			}
+			.contains-col1 img
+			{
+				
+				border-radius: 50%;
+				
+			}
+			.contains-col2 img
+			{
+				
+				border-radius: 50%;
+				
+			}
+			#column1
+			{
+				
+				text-align: left;
+				
+				float: left;
+							
+				
+			}
+			#column2
+			{
+				text-align: left;
+				
+				float: left;
+				
+				
+			}
+			
+			.public-review
+			{
+				height: 100%;
+				width: 100%;
+				text-align: left; 
+				background-image: url('review-page.jpg');
+				background-size: cover;
+				background-position: top;
+				float: left;
+				opacity: 0.9;
+				
+			}
+			#heading_public_review
+			{
+				text-align: center;
+			}
+			.card-review
+			{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				transition: 0.3s;
+				text-align: justify;
+			}
+			.card-review:hover
+			{
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+				
+			}
+			.card-review img
+			{
+				border-radius: 5px;
+			}
+			#review1
+			{
+				width: 300px;
+				height: 200px;
+				float: left;
+				top: 50px;
+				left:50px;
+				position: relative;
+				color: white;
+			}
+			#review2
+			{
+				width: 300px;
+				height: 200px;
+				float: left;
+				top: 150px;
+				left:100px;
+				position: relative;
+				color: white;
+			}
+			#review3
+			{
+				width: 300px;
+				height: 200px;
+				float: left;
+				top: 250px;
+				left:150px;
+				position: relative;
+				color: white;
+			}
+			.add-review
+			{
+				height: 90%;
+				width: 100%;
+				text-align: left; 
+				background-image: url('add-review-page.jpg');
+				background-size: cover;
+				background-position: top;
+				float: left;
+				opacity: 0.9;
+				
+			}
+			#heading_add_review
+			{
+				text-align: center;
+
+			}
+			.details
+			{
+				position: relative;
+				top: 20%;
+				left: 20%;
+				height: 50%;
+				width: 50%;
+				
+			}
+			#name
+			{
+				height: 50px;
+				float: center;
+				font-size: 40px;
+				font-weight: 400;
+			}
+			.footer
+			{
+				height: 10%;
+				width: 100%;
+				text-align: left; 
+				background-image: url('icon.png');
+				background-size: cover;
+				background-position: top;
+				float: left;
+				background-repeat: repeat;
+				background-size: 62px 65px;
+				
+				
+			}
+			.footer img
+			{
+				border-radius: 50%;
+				opacity: 0.5;
+			}
+			.left
+			{
+				height: 100%;
+				width:40%;
+				position: relative;
+				float: left;
+				
+				border-radius: 10px;
+			}
+			.right
+			{
+				height: 100%;
+				width: 40%;
+				position: relative;
+				float: right;
+				
+				border-radius: 10px;
+			}
+			
+		</style>
+	 </head>
+	 <body>
+		<div class="front">
+			<div class="top">
+				<a href="#">top</a>
+			</div>
+			<div class="logo-box">
+				<div id="icon">
+				<img src="icon.png" alt="Logo" height="60px" width="60px">
+				</div>
+			</div>
+			
+			<div class="primary-box">
+				<div class="heading-primary">
+					<div id="heading-primary-main">
+						Destination
+					</div>
+					<div id="heading-primary-sub">
+						Where your shopping is destined
+					</div>
+				</div>
+			</div>
+			<div class="offer-box">
+				<a href="#heading_surprise" id="heading-offer">OFFERs</a>
+			</div>
+			
+			<div id="top_bar">
+				<ul>
+					<li id="heading_home">
+						HOME
+					</li>
+					<li id="new">
+						<a href="#heading_newer">NEWER</a>
+					</li>
+					<li id="most">
+						<a href="#heading_most_bought">MOST BOUGHT</a>
+					</li>
+					<li id="top-review1">
+						<a href="#heading_public_review">PUBLIC REVIEWS</a>
+					</li>
+					<li id="top-review2">
+						<a href="#heading_add_review">ADD REVIEW</a>
+					</li>
+					<li id="cv19">
+						<a href="http://www.google.com/covid19/" target=_blank>COVID 19 Update</a>
+					</li>
+					<li>
+						<input type="text" placeholder="Search" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="newer">
+			<h2 id="heading_newer">LAUNCHING SOON...</h2>
+			<div class="stack">
+				<div id="fir">
+				<img src="newer\1.jpg"  height="300" width="300" >	
+					<div>
+					<strong>Samsung Galaxy S20</strong>
+					<br />
+					24 April 2020
+					<br />
+					₹75k
+					<br />
+					Android v 10,12 GB ram
+					<br />
+					12 MP, 64 MP, 18 MP REAR
+					<br />
+					12 MP FRONT
+					<br />
+					6.2 inch DISPLAY
+					<br />
+					</div>
+				</div>
+				<div id="sec">
+				<img src="newer\2.jpg"  height="300" width="300" >	
+					<div>
+					<strong>JAQUET DROZ</strong>
+					</br>
+					Year 2020
+					<br />
+					$ 23k
+					<br />
+					ALLIGATOR LEATHER
+					<br />
+					WHITE GOLD
+					</div>
+				</div>
+				<div id="thi">
+				<img src="newer\3.jpg"  height="300" width="300" >	
+					<div>
+					<strong>Microsoft X-box Series</strong>
+					<br />
+					Year 2020
+					<br />
+					₹40k
+					<br />
+					17B SSD
+					<br />
+					4K,8K resolution 120 Fps
+					</div>
+				</div>
+				<div id="fou">
+				<img src="newer\4.jpg" height="300" width="300" >	
+					<div>
+					<strong>Philips Hue</strong>
+					<br />
+					Coming soon...
+					<br />
+					Resonate Sleek Outdoor lamp
+					<br />
+					Produces clean & bright triangles of light
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="surprise">
+			<h2 id="heading_surprise">SURPRISE SECTION...</h2>
+			<div class="card-surprise">
+				<div id="column">
+				<img src="surprise\1.jpg"  alt="Avatar" height="300" width="300" >
+				<h4><strong>LAKME</strong></h4>
+				Lakme's Kajal  <strike>₹400</strike> ₹200
+				</div>
+				<div id="column">
+				<img src="surprise\2.jpg"  alt="Avatar" height="300" width="300" >
+				<h4><strong>SMART PHONES</strong></h4>
+				Discount  <strike>10%</strike> 20%
+				</div>
+				<div id="column">
+				<img src="surprise\3.jpg"  alt="Avatar" height="300" width="300" >
+				<h4><strong>MI</strong></h4>
+				Headphones  <strike>₹1499</strike> ₹999
+				</div>
+				<div id="column">
+				<img src="surprise\4.jpg"  alt="Avatar" height="300" width="300" >
+				<h4><strong>NIKE</strong></h4>
+				T-shirt  <strike>₹4000</strike> ₹3200
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		<div class="most-bought">
+			<h2 id="heading_most_bought">FAVOURITE ITEMS...</h2>
+			<div class="card-most">
+			<div class="contains-col1">
+				
+				<div id="column1">
+				<img src="most_bought\1.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Baggit</strong> 
+				<br />Hand-bag
+				<br />&#10031; 4/5
+				<br />660 Votes
+				</div>
+				
+				<div id="column1">
+				<img src="most_bought\2.png"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Samsung</strong> 
+				<br />Galaxy A50
+				<br />&#10031; 4.5/5
+				<br />1.3k Votes
+				</div>
+				
+				<div id="column1">
+				<img src="most_bought\3.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Huggies</strong> 
+				<br />Pants
+				<br />&#10031; 4/5
+				<br />600 Votes 
+				</div>
+				
+				<div id="column1">
+				<img src="most_bought\4.jpeg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>FastTrack</strong> 
+				<br />Watch
+				<br />&#10031; 5/5
+				<br />1.1k Votes
+				</div>
+				
+				<div id="column1">
+				<img src="most_bought\5.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>SanDisk</strong> 
+				<br />Pendrive
+				<br />&#10031; 4/5
+				<br />870 Votes
+				</div>
+
+			</div>
+			<div class="contains-col2">
+				<div id="column2">
+				<img src="most_bought\6.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Milton</strong> 
+				<br />Bottle Pack
+				<br />&#10031; 5/5
+				<br />1.5k Votes
+				</div>
+
+				<div id="column2">
+				<img src="most_bought\7.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>PUMA</strong> 
+				<br />Shoes
+				<br />&#10031; 4.5/5
+				<br />500 Votes
+				</div>
+
+				<div id="column2">
+				<img src="most_bought\8.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Elle</strong> 
+				<br />Pendant
+				<br />&#10031; 4/5
+				<br />900 Votes
+				</div>
+
+				<div id="column2">
+				<img src="most_bought\9.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Kurl-On</strong> 
+				<br />Bed Sheets
+				<br />&#10031; 5/5
+				<br />1k Votes 
+				</div>
+
+				<div id="column2">
+				<img src="most_bought\10.jpg"  alt="Avatar" height="100" width="100" >
+				<br /><strong>Black-Berry</strong> 
+				<br />Coat-Suit
+				<br />&#10031; 4/5
+				<br />300 Votes
+				</div>
+			</div>
+			</div>
+		</div>
+		<hr>
+		<div class="public-review">
+			<h2 id="heading_public_review">HAPPY USER REVIEWS...</h2>
+			<div class="card-review">
+				
+				<div id="review1">
+				<img src="review\1.jpg"  alt="Avatar" height="100" width="100" >
+				I really liked the responsibility taken by Destination, in COVID 19 situation also,
+				<br />DESTINATION is delivering the essential products...
+				<br />DESTINATION team dedication towards work, with passion they work. 
+				<br />Not for profit but to help people, salute to DESTINATION... THANKS
+				</div>
+				
+				<div id="review2">
+				<img src="review\2.jpg"  alt="Avatar" height="100" width="100" >
+				FELT VERY GOOD TO DISCUSS MY ISSUE REGARDING MY ORDER THE 
+				<br />CALL EXECUTIVE WAS VERY POLITE AND HELPFUL AND 
+				<br />UNDERSTANDABLE KEEP IT UP destination I M HAPPY TO USE
+				</div>
+				
+				<div id="review3">
+				<img src="review\3.jpg"  alt="Avatar" height="100" width="100" >
+				Excellent services.I have bought many things from DESTINATION
+				<br />and i liked them.
+				<br />the things that i didn't liked was returned very very easily.
+				</div>
+
+			</div>
+		</div>
+		<hr>
+		<div class="add-review">
+			<h2 id="heading_add_review">LUCKY TO HELP YOU...</h2>
+			<div class="details">
+				<div id="name">	
+					<input type="text" placeholder="First Name" />
+				</div>
+				<div id="name">	
+					<input type="text" placeholder="Last Name" />
+				</div>
+				<br />
+				<div id="user-review">
+					<textarea placeholder="Your comments are valuable,please type here..."></textarea>
+				</div>
+				<br />
+				<div id="submit">
+					<input type="submit" value="Click Me!">
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="footer">
+			<div class="left">
+			<strong><br /> Terms and Conditions | Privacy Policy | Contact Us</strong>
+			</div>
+			
+			<div class="right">
+			<strong><br /> DESTINATION | Copyright</strong>
+			</div>
+		</div>
+		<hr>
+		
+	 </body>
+</html>
